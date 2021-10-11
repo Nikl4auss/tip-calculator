@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="logo" class="header-logo" />
+    </header>
+
+    <main class="tip-calculator">
+      <div class="tip-calculator__inputs-container">
+        <label for="bill" class="tip-calculator__label">
+          <p class="tip-calculator__text">Bill</p>
+          <input
+            type="number"
+            id="bill"
+            class="tip-calculator__input tip-calculator__input--bill"
+            placeholder="0.00"
+            min="0"
+          />
+        </label>
+
+        <div class="tip-calculator__tips-container">
+          <p class="tip-calculator__text">Select Tip %</p>
+          <div class="tip-calculator__buttons-container">
+            <button class="tip-calculator__button" value="0.05">5%</button
+            ><button class="tip-calculator__button" value="0.10">10%</button
+            ><button class="tip-calculator__button" value="0.15">15%</button
+            ><button class="tip-calculator__button" value="0.25">25%</button
+            ><button class="tip-calculator__button" value="0.50">50%</button>
+            <input
+              type="number"
+              id="tip-custom"
+              class="tip-calculator__input tip-calculator__input--custom"
+              placeholder="Custom"
+              min="0"
+            />
+          </div>
+        </div>
+
+        <label for="persons" class="tip-calculator__label" id="persons-label">
+          <p class="tip-calculator__text">Number of People</p>
+          <input
+            type="number"
+            id="persons"
+            class="tip-calculator__input tip-calculator__input--person"
+            placeholder="1"
+            min="0"
+          />
+        </label>
+      </div>
+      <div class="tip-calculator__results-container">
+        <div class="tip-calculator__results">
+          <div class="tip-calculator__result">
+            <p class="tip-calculator__price-text">
+              Tip Amount
+              <span class="tip-calculator__price-subtext">/ person</span>
+            </p>
+            <p class="tip-calculator__price-display">
+              $<span id="tipDisplay">0.00</span>
+            </p>
+          </div>
+          <div class="tip-calculator__result">
+            <p class="tip-calculator__price-text">
+              Total <span class="tip-calculator__price-subtext">/ person</span>
+            </p>
+            <p class="tip-calculator__price-display">
+              $<span id="totalDisplay">0.00</span>
+            </p>
+          </div>
+        </div>
+
+        <button
+          disabled
+          class="tip-calculator__button tip-calculator__button--reset"
+          id="buttonReset"
+        >
+          Reset
+        </button>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.github.com/nikl4auss">Nicolas Joel Marinelli</a>.
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
